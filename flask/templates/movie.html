@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    {# <!-- {% 주석이에용 %} --> #}
+    <!-- 파이썬 for문 쓰기 (주의: 끝을 알려줘야함 > endfor)-->
+    {% for movie in movies %}
+        {% if movie =='조커' %}
+            <li>{{movie}} (이 영화 진짜 재밌어!)</li>
+        {% elif movie == '겨울왕국2' %}
+            <li>{{movie}} (겨울왕국!)</li>
+        {% else %}
+            <li>{{ movie }}</li>
+        {% endif %}
+    {% endfor %}
+
+</body>
+</html>
